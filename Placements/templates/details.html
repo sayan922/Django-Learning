@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Company Details
+{% endblock %}
+
+{% block content %}
+<div class="flex flex-col items-center bg-green-200 p-7 min-h-screen">
+<h1 class="py-4">{{ company.name }} Details</h1>
+<h2 class="p-4">{{company.description}}</h2>
+</div>
+{%endblock%}
