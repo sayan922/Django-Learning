@@ -25,6 +25,7 @@ SECRET_KEY = 'django-insecure-buf@jh^!z(t$@jto@hx9@!3q1=m7u^&#a006w+n%t=5(($w1i_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 ALLOWED_HOSTS = ['*']
 
 
@@ -45,7 +46,9 @@ INSTALLED_APPS = [
 
 TAILWIND_APP_NAME = 'theme'
 INTERNAL_IPS = ['127.0.0.1']
+
 NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd" #we use r in windows path due to \.. cz in linux and mac we have / as path
+
 
 
 MIDDLEWARE = [
