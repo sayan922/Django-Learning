@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: Placements
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn MyProject.wsgi:application
+    envVars:
+      - key: qc_8@2f41qoup)pw%_lr1jy$=nxg2v@2#xyg04hz4&9vej8sp7
+        generateValue: true
