@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Home Page
+{% endblock %}
+
+{% block content %}
+<h1 class="py-4">Welcome to Jhantu College ka Placement Portal</h1>
+<div class="flex flex-wrap justify-center gap-8 bg-green-200 p-7 ">
+{% for company in companies %}
+    <div class="bg-white p-4 rounded-lg shadow-md w-64 text-center flex-col flex items-center gap-2">
+        <img src="{{company.image.url}}" alt="" class="w-full h-40 object-contain rounded-md mb-4">
+        <h3>{{company.name}}</h3>
+        <a href="{% url 'companies_detail' company.id %}" class="">
+            <button class="bg-blue-500 text-white px-4 py-1 rounded hover:bg-blue-400 transition duration-300">
+                 {{company.type}}
+            </button>
+        </a>
+    </div>
+{% endfor %}
+</div>
+{% endblock %}
+

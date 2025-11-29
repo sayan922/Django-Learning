@@ -1,0 +1,24 @@
+{% load static %}
+{% load static tailwind_tags%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        Default
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    {% tailwind_css %}
+  
+</head>
+<body>
+    {% load django_browser_reload %}
+    {% django_browser_reload_script %}
+
+    <!-- <nav class="flex ">This is Navbar</nav> -->
+    {% block content %}{% endblock %}
+    
+</body>
+</html>
